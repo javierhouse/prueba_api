@@ -10,5 +10,5 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      - ConnectioStrings__DefaultConnection=User ID=postgres;Password=1234;Server=127.0.0.1;Port=5432;Database=SampleDriver;IntegratedSecurity=true;Pooling=true;
+      - ConnectioStrings__DefaultConnection=User ID=postgres;Password=1234;Server=192.168.68.210;Port=5432;Database=SampleDriver;IntegratedSecurity=true;Pooling=true;
     
