@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  prueba_api:
+    image: docker.io/library/prueba_api
+    container_name: prueba_api
+    ports:
+      - "5166:5166"
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ConnectioStrings__DefaultConnection=User ID=postgres;Password=1234;Server=127.0.0.1;Port=5432;Database=SampleDriver;IntegratedSecurity=true;Pooling=true;
+    
