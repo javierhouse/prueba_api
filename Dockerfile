@@ -1,6 +1,8 @@
 # https://hub.docker.com/_/microsoft-dotnet
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /app
+EXPOSE 80
+EXPOSE 8080
 
 # copy csproj and restore as distinct layers
 COPY *.csproj ./
