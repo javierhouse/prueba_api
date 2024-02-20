@@ -15,6 +15,10 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+using var scope = app.Services.CreateScope();
+await using var dbContext = scope.ServiceProvider.GetRequiredService<ApiDbContext>();
+await dbContext.Database.MigrateAsync();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

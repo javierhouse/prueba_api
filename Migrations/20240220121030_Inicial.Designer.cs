@@ -11,8 +11,8 @@ using prueba_api.Data;
 namespace prueba_api.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20240217163213_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240220121030_Inicial")]
+    partial class Inicial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
